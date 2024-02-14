@@ -4,3 +4,6 @@
 void inference_step() {
     // Execute single step of model inference
 }
+
+import logging
+logging.basicConfig(level=logging.INFO)
