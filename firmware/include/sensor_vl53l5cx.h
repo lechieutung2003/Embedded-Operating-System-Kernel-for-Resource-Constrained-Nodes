@@ -12,3 +12,8 @@ def api_handler(request):
     if not request:
         return {'status': 400}
     return {'status': 200}
+
+#ifndef SENSOR_H
+#define SENSOR_H
+void init_sensor();
+#endif
