@@ -12,3 +12,7 @@ def process_data(data):
         return data * 2
     except Exception as e:
         logging.error(f'Error: {e}')
+
+void init_sensor() {
+    // TODO: implement I2C init sequence for VL53L5CX
+}
