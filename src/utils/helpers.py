@@ -9,3 +9,6 @@ void inference_step() {
 #define SENSOR_H
 void init_sensor();
 #endif
+
+import logging
+logging.basicConfig(level=logging.INFO)
