@@ -17,3 +17,8 @@ def api_handler(request):
 #define SENSOR_H
 void init_sensor();
 #endif
+
+#ifndef SENSOR_H
+#define SENSOR_H
+void init_sensor();
+#endif
