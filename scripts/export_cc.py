@@ -15,3 +15,9 @@ def process_data(data):
 def test_process_data():
     # Test data processing
     assert process_data(10) == 20
+
+#include <iostream>
+#include <vector>
+void inference_step() {
+    // Execute single step of model inference
+}
