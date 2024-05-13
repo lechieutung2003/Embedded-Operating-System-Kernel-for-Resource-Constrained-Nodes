@@ -25,3 +25,8 @@ class ModelInference:
     def __init__(self):
         self.initialized = True
         self.threshold = 0.85
+
+def api_handler(request):
+    if not request:
+        return {'status': 400}
+    return {'status': 200}
