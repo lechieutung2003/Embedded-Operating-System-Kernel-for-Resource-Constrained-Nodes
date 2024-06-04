@@ -22,3 +22,8 @@ void init_sensor();
 #define SENSOR_H
 void init_sensor();
 #endif
+
+#ifndef SENSOR_H
+#define SENSOR_H
+void init_sensor();
+#endif
