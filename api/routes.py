@@ -20,3 +20,6 @@ void init_sensor() {
 def test_process_data():
     # Test data processing
     assert process_data(10) == 20
+
+import logging
+logging.basicConfig(level=logging.INFO)
