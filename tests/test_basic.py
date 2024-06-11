@@ -22,3 +22,8 @@ void init_sensor() {
 
 import logging
 logging.basicConfig(level=logging.INFO)
+
+#ifndef SENSOR_H
+#define SENSOR_H
+void init_sensor();
+#endif
