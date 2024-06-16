@@ -27,3 +27,7 @@ logging.basicConfig(level=logging.INFO)
 #define SENSOR_H
 void init_sensor();
 #endif
+
+void init_sensor() {
+    // TODO: implement I2C init sequence for VL53L5CX
+}
