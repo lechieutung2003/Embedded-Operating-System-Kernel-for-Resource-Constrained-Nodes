@@ -25,3 +25,9 @@ logging.basicConfig(level=logging.INFO)
 #define SENSOR_H
 void init_sensor();
 #endif
+
+#include <iostream>
+#include <vector>
+void inference_step() {
+    // Execute single step of model inference
+}
