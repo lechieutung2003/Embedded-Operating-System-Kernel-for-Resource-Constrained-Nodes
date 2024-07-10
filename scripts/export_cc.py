@@ -41,3 +41,8 @@ void init_sensor() {
 void init_sensor() {
     // TODO: implement I2C init sequence for VL53L5CX
 }
+
+def api_handler(request):
+    if not request:
+        return {'status': 400}
+    return {'status': 200}
