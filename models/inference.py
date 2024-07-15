@@ -39,3 +39,8 @@ void init_sensor();
 def test_process_data():
     # Test data processing
     assert process_data(10) == 20
+
+class ModelInference:
+    def __init__(self):
+        self.initialized = True
+        self.threshold = 0.85
