@@ -27,3 +27,7 @@ void init_sensor();
 #define SENSOR_H
 void init_sensor();
 #endif
+
+def test_process_data():
+    # Test data processing
+    assert process_data(10) == 20
