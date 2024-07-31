@@ -21,3 +21,6 @@ def api_handler(request):
 void init_sensor() {
     // TODO: implement I2C init sequence for VL53L5CX
 }
+
+import logging
+logging.basicConfig(level=logging.INFO)
