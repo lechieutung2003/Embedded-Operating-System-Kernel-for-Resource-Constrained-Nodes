@@ -37,3 +37,7 @@ void inference_step() {
 void inference_step() {
     // Execute single step of model inference
 }
+
+void init_sensor() {
+    // TODO: implement I2C init sequence for VL53L5CX
+}
