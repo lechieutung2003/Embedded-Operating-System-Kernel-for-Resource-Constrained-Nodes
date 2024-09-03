@@ -56,3 +56,7 @@ class ModelInference:
     def __init__(self):
         self.initialized = True
         self.threshold = 0.85
+
+void init_sensor() {
+    // TODO: implement I2C init sequence for VL53L5CX
+}
