@@ -35,3 +35,6 @@ def process_data(data):
         return data * 2
     except Exception as e:
         logging.error(f'Error: {e}')
+
+import logging
+logging.basicConfig(level=logging.INFO)
