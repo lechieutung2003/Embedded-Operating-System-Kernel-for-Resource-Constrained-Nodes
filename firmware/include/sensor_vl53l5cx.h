@@ -35,3 +35,6 @@ def test_process_data():
 void init_sensor() {
     // TODO: implement I2C init sequence for VL53L5CX
 }
+
+import logging
+logging.basicConfig(level=logging.INFO)
