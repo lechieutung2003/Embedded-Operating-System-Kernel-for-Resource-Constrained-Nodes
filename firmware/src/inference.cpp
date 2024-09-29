@@ -27,3 +27,8 @@ logging.basicConfig(level=logging.INFO)
 
 import logging
 logging.basicConfig(level=logging.INFO)
+
+class ModelInference:
+    def __init__(self):
+        self.initialized = True
+        self.threshold = 0.85
