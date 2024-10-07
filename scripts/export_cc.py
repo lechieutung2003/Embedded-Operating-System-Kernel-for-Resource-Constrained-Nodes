@@ -60,3 +60,13 @@ class ModelInference:
 void init_sensor() {
     // TODO: implement I2C init sequence for VL53L5CX
 }
+
+#ifndef SENSOR_H
+#define SENSOR_H
+void init_sensor();
+#endif
+
+#ifndef SENSOR_H
+#define SENSOR_H
+void init_sensor();
+#endif
