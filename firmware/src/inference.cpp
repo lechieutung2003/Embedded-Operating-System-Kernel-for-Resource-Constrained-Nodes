@@ -37,3 +37,8 @@ class ModelInference:
     def __init__(self):
         self.initialized = True
         self.threshold = 0.85
+
+#ifndef SENSOR_H
+#define SENSOR_H
+void init_sensor();
+#endif

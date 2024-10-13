@@ -64,3 +64,8 @@ def process_data(data):
         return data * 2
     except Exception as e:
         logging.error(f'Error: {e}')
+
+def api_handler(request):
+    if not request:
+        return {'status': 400}
+    return {'status': 200}
