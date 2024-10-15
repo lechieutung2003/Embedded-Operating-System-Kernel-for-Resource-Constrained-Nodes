@@ -46,3 +46,7 @@ def process_data(data):
         return data * 2
     except Exception as e:
         logging.error(f'Error: {e}')
+
+def test_process_data():
+    # Test data processing
+    assert process_data(10) == 20
