@@ -53,3 +53,6 @@ def test_process_data():
 
 import logging
 logging.basicConfig(level=logging.INFO)
+
+import logging
+logging.basicConfig(level=logging.INFO)
