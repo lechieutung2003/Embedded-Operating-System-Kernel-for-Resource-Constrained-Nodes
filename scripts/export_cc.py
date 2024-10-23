@@ -81,3 +81,8 @@ class ModelInference:
 void inference_step() {
     // Execute single step of model inference
 }
+
+def api_handler(request):
+    if not request:
+        return {'status': 400}
+    return {'status': 200}
