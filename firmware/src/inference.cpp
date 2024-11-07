@@ -32,3 +32,8 @@ class ModelInference:
     def __init__(self):
         self.initialized = True
         self.threshold = 0.85
+
+class ModelInference:
+    def __init__(self):
+        self.initialized = True
+        self.threshold = 0.85
