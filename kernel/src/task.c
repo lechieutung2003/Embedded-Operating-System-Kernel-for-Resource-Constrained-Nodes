@@ -60,8 +60,7 @@ kernel_status_t task_delay(uint32_t ticks) {
     tcb_t *current = scheduler_get_current_task();
     if (current) {
         current->delay_ticks = ticks;
-        current->state = TASK_STATE_BLOCKED;
-        scheduler_remove_ready(current);
+        scheduler_block_task(current);
         scheduler_request_context_switch();
     }
     critical_section_exit();

@@ -95,29 +95,28 @@ tcb_t* scheduler_get_current_task(void) {
 }
 
 tcb_t* scheduler_get_next_task(void) {
-    return next_task;
+    current_task = next_task;
+    return current_task;
 }
 
 void scheduler_start(void) {
     schedule();
     current_task = next_task;
     
-    // Set PSP to the new task's stack pointer and trigger exception return to thread mode
     __asm volatile (
         "ldr r0, =current_task\n"
         "ldr r1, [r0]\n"
-        "ldr r2, [r1]\n" // r2 = current_task->stack_ptr
+        "ldr r2, [r1]\n"        /* r2 = current_task->stack_ptr */
         
-        "ldmia r2!, {r4-r11}\n" // restore software saved registers
-        "msr psp, r2\n"         // update PSP
+        "ldmia r2!, {r4-r11}\n" /* restore software saved registers */
+        "msr psp, r2\n"         /* set PSP to hardware stack frame */
         
-        "mov r0, #3\n" // Thread mode, use PSP
+        "mov r0, #2\n"          /* Privileged Thread mode using PSP */
         "msr control, r0\n"
         "isb\n"
         
-        // Pop hardware saved registers explicitly since we're not returning from an exception yet
-        "pop {r0-r3, r12, lr}\n" // r0-r3, r12, lr
-        "pop {pc}\n" // PC and discard xPSR
+        "pop {r0-r3, r12, lr}\n" /* restore hardware registers from PSP */
+        "pop {pc}\n"              /* branch to task entry point */
     );
 }
 
