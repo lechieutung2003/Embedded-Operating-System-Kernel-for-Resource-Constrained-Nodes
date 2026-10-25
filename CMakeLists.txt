@@ -15,6 +15,11 @@ set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -T${CMAKE_SOURCE_DIR}/link
 include_directories(
     kernel/include
     arch/arm
+    drivers
+)
+
+set(DRIVER_SOURCES
+    drivers/uart.c
 )
 
 set(KERNEL_SOURCES
@@ -41,6 +46,7 @@ add_executable(scheduler_demo
     applications/scheduler_demo/main.c
     ${KERNEL_SOURCES}
     ${ARCH_SOURCES}
+    ${DRIVER_SOURCES}
     ${STARTUP_SOURCES}
 )
 
@@ -49,6 +55,7 @@ add_executable(mutex_demo
     applications/mutex_demo/main.c
     ${KERNEL_SOURCES}
     ${ARCH_SOURCES}
+    ${DRIVER_SOURCES}
     ${STARTUP_SOURCES}
 )
 
@@ -57,6 +64,7 @@ add_executable(semaphore_demo
     applications/semaphore_demo/main.c
     ${KERNEL_SOURCES}
     ${ARCH_SOURCES}
+    ${DRIVER_SOURCES}
     ${STARTUP_SOURCES}
 )
 
@@ -65,6 +73,7 @@ add_executable(priority_inversion_demo
     applications/priority_inversion_demo/main.c
     ${KERNEL_SOURCES}
     ${ARCH_SOURCES}
+    ${DRIVER_SOURCES}
     ${STARTUP_SOURCES}
 )
 
@@ -73,5 +82,6 @@ add_executable(memory_pool_demo
     applications/memory_pool_demo/main.c
     ${KERNEL_SOURCES}
     ${ARCH_SOURCES}
+    ${DRIVER_SOURCES}
     ${STARTUP_SOURCES}
 )
